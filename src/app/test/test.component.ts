@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
 
 @Component({
-  selector: 'app-codility-test',
+  selector: 'app-test',
   template: `<div class='card'>
   <div class='card-header'>
     Insert Page Title from Component here
