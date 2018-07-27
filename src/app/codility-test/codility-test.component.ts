@@ -5,7 +5,7 @@ import { IProduct } from './product';
   selector: 'app-codility-test',
   template: `<div class='card'>
   <div class='card-header'>
-    {{pageTitle}}
+    Insert Page Title from Component here
   </div>
   <div class='card-body'>
     
@@ -21,14 +21,9 @@ import { IProduct } from './product';
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor = 'let product of products; let i = index' (click) = 'onRowClick(i)' [class.active]='i == selectedRow'>
-           
-            <td>{{product.productName}}</td>
-            <td>{{product.productCode | lowercase }}</td>
-            <td>{{product.description}}</td>
-            <td>{{product.price | currency: 'USD' : 'symbol':'1.2-2'}}</td>
-            <td><i class="fa fa-heart"></i><span>{{count}}</span></td>
-        </tr>
+        
+         
+        
         </tbody>
       </table>
     </div>
@@ -39,14 +34,11 @@ import { IProduct } from './product';
     color: white;
   }
 
-  .table tr.active i {
-    color: deeppink;
-  }`]
+  `]
 })
 export class CodilityTestComponent {
 
   pageTitle: string = "Product List";
-  isActive: boolean = false;
   selectedRow : Number;
 
   products: IProduct[] = [
@@ -67,7 +59,7 @@ export class CodilityTestComponent {
 ];
 
   onRowClick(index): void {
-    this.selectedRow = index;
+    
   }
 
 }
